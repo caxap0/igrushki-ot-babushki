@@ -4,12 +4,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Подарок, который не купишь в магазине — вязаные игрушки ручной работы, Елабуга</title>
-  <meta name="description" content="Вязаные игрушки ручной работы из Елабуги: мишки, куклы, зверята. Каждую игрушку бабушка вяжет сама, крючком. Оставьте заявку, чтобы заказать.">
+  <meta name="description" content="Вязаные игрушки по вашей идее из Елабуги: герои мультиков, игрушки по фото или что-то своё. Каждую игрушку бабушка вяжет сама, вручную. Оставьте заявку, чтобы заказать.">
   <meta name="theme-color" content="#EEF4F8">
   <link rel="icon" type="image/png" href="img/favicon.png">
 
   <meta property="og:title" content="Подарок, который не купишь в магазине — вязаные игрушки ручной работы, Елабуга">
-  <meta property="og:description" content="Мишки, куклы, зверята — каждую игрушку бабушка вяжет сама, крючком, из мягкой пряжи. Работаем в Елабуге.">
+  <meta property="og:description" content="Вязаные игрушки по вашей идее: героя из мультика, игрушку по фото или что-то своё. Каждую игрушку бабушка вяжет сама. Работаем в Елабуге.">
   <meta property="og:image" content="https://caxap0.github.io/igrushki-ot-babushki/img/og.jpg">
   <meta property="og:url" content="https://caxap0.github.io/igrushki-ot-babushki/">
   <meta property="og:type" content="website">
@@ -41,7 +41,7 @@
       <div class="container hero">
         <div class="hero-text">
           <h1>Подарок, который не купишь в магазине</h1>
-          <p class="intro-text">Вязаная игрушка ручной работы — на день рождения, Новый год или просто так. Каждую игрушку бабушка вяжет сама, вручную, из мягкой пряжи.</p>
+          <p class="intro-text">Вязаная игрушка по вашей идее — на день рождения, Новый год или просто так. Бабушка свяжет героя из мультика, игрушку по фото или то, что вы придумаете.</p>
           <p class="intro-text">Пока работаем только в Елабуге.</p>
           <a class="btn" href="#zayavka">Оставить заявку</a>
           <p class="muted note">Цена и сроки обсуждаются лично</p>
@@ -53,6 +53,7 @@
     <section class="band band--white" id="raboty">
       <div class="container">
         <h2>Работы бабушки</h2>
+        <p class="muted">Это примеры работ — бабушка свяжет и по вашей идее.</p>
         <div class="gallery">
 
           <article class="card">
@@ -145,13 +146,13 @@
         <ol class="steps">
           <li class="step">
             <span class="step-num" aria-hidden="true">1</span>
-            <h3>Выберите игрушку</h3>
-            <p>Посмотрите работы и выберите понравившуюся.</p>
+            <h3>Придумайте игрушку</h3>
+            <p>Героя из мультика, игрушку по фото или что-то своё.</p>
           </li>
           <li class="step">
             <span class="step-num" aria-hidden="true">2</span>
             <h3>Оставьте заявку</h3>
-            <p>Укажите игрушку и как с вами связаться.</p>
+            <p>Опишите идею и как с вами связаться.</p>
           </li>
           <li class="step">
             <span class="step-num" aria-hidden="true">3</span>
@@ -165,27 +166,10 @@
     <section class="band band--white" id="zayavka">
       <div class="container">
         <h2>Оставить заявку</h2>
-        <p class="section-intro">Выберите игрушку из работ или опишите свою идею — бабушка посмотрит и скажет, получится ли связать.</p>
+        <p class="section-intro">Опишите, какую игрушку хотите: героя из мультика, игрушку по фото или что-то совсем своё. Бабушка посмотрит и скажет, получится ли связать.</p>
 
         <div class="form-card">
           <form id="order-form" class="order-form" novalidate>
-
-            <div class="field">
-              <label for="toy">Игрушка</label>
-              <select id="toy" name="toy" required aria-describedby="toy-error">
-                <option value="" disabled selected>Выберите игрушку</option>
-                <option value="Дракончик">Дракончик</option>
-                <option value="Змейка">Змейка</option>
-                <option value="Мишка-соня">Мишка-соня</option>
-                <option value="Оленёнок">Оленёнок</option>
-                <option value="Кукла с кудряшками">Кукла с кудряшками</option>
-                <option value="Сова-отличница">Сова-отличница</option>
-                <option value="Лёва">Лёва</option>
-                <option value="Банщик с веником">Банщик с веником</option>
-                <option value="Своя идея">Своя идея</option>
-              </select>
-              <p class="field-error" id="toy-error" hidden></p>
-            </div>
 
             <div class="field">
               <label for="name">Ваше имя</label>
@@ -201,8 +185,10 @@
             </div>
 
             <div class="field">
-              <label for="comment">Пожелания (необязательно)</label>
-              <textarea id="comment" name="comment" rows="4" maxlength="1000" placeholder="Цвет, размер, к какому сроку нужна игрушка. Если своя идея — опишите её."></textarea>
+              <label for="idea">Какую игрушку хотите</label>
+              <textarea id="idea" name="idea" rows="5" maxlength="1000" required placeholder="Например: зайка в синем комбинезоне, как в мультике «…». Можно вставить ссылку на картинку или видео." aria-describedby="idea-hint idea-error"></textarea>
+              <p class="hint" id="idea-hint">Фото или видео персонажа можно будет прислать, когда мы свяжемся с вами.</p>
+              <p class="field-error" id="idea-error" hidden></p>
             </div>
 
             <div class="hp-wrap" aria-hidden="true">
@@ -228,12 +214,16 @@
       <div class="container">
         <h2>Вопросы и ответы</h2>
         <details class="faq-item">
-          <summary>Игрушка будет точно как на фото?</summary>
-          <p>Каждая игрушка вяжется вручную, поэтому новая может немного отличаться от той, что на фото. Это нормально для ручной работы.</p>
+          <summary>Можно связать героя из мультика или игрушку по фото?</summary>
+          <p>Да. Опишите его в заявке или вставьте ссылку на картинку, а фото и видео можно прислать, когда мы свяжемся с вами. Бабушка посмотрит и честно скажет, получится ли.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Игрушка будет точно как на картинке?</summary>
+          <p>Каждая игрушка вяжется вручную, поэтому даже по одной идее две игрушки немного отличаются. Это нормально для ручной работы.</p>
         </details>
         <details class="faq-item">
           <summary>Можно другой цвет или размер?</summary>
-          <p>Да, напишите об этом в пожеланиях к заявке — бабушка скажет, получится ли.</p>
+          <p>Да, напишите об этом в заявке — бабушка скажет, получится ли.</p>
         </details>
         <details class="faq-item">
           <summary>Сколько стоит игрушка?</summary>

@@ -1,10 +1,10 @@
-// Адрес, куда отправляются заявки. Будет настроен позже.
-const ORDER_ENDPOINT = '';
+// Адрес Google Apps Script (веб-приложение), куда отправляются заявки.
+const ORDER_ENDPOINT = 'https://script.google.com/macros/s/AKfycbwxHl0cEMOI8l30Uk41w2v6Xrxl7nSuBhTnHKpVRF8-4N_Jj1X0Sr95yPZ_sPW7peNb/exec';
 
 const FIELD_MESSAGES = {
-  toy: 'Выберите игрушку или «Своя идея»',
   name: 'Напишите, как к вам обращаться',
   contact: 'Укажите телефон или ник, чтобы мы могли связаться',
+  idea: 'Опишите, какую игрушку хотите',
 };
 
 function setFieldError(form, fieldName, message) {
@@ -39,16 +39,15 @@ function setupOrderForm() {
   form.addEventListener('submit', async (event) => {
     event.preventDefault();
 
-    const toy = form.elements.toy.value.trim();
     const name = form.elements.name.value.trim();
     const contact = form.elements.contact.value.trim();
-    const comment = form.elements.comment.value.trim();
+    const idea = form.elements.idea.value.trim();
 
     // Проверка полей
     const errors = {
-      toy: toy ? '' : FIELD_MESSAGES.toy,
       name: name.length >= 2 ? '' : FIELD_MESSAGES.name,
       contact: contact.length >= 5 ? '' : FIELD_MESSAGES.contact,
+      idea: idea.length >= 5 ? '' : FIELD_MESSAGES.idea,
     };
 
     let firstInvalid = null;
@@ -86,7 +85,7 @@ function setupOrderForm() {
     try {
       const response = await fetch(ORDER_ENDPOINT, {
         method: 'POST',
-        body: JSON.stringify({ toy, name, contact, comment, page: location.href }),
+        body: JSON.stringify({ name, contact, idea, page: location.href }),
       });
       const data = await response.json();
 
